@@ -39,4 +39,21 @@
 
 ## Pattern matching
 
+- The `=` operator in Elixir is called the match operator.
+- A pattern match error will occur if the sides can't be matched.
+- We can match on specific values `{:ok, result} = {:ok, 13}`.
+- A list also supports matching on its own head and tail.
+
+## case, cond, and if
+
+- `case` allows us to compare a value against many patterns.
+- To pattern match against an existing variable, you need to use the `^` operator.
+- Clauses also allow extra conditions to be specified via guards like `when`.
+- If none of the clauses match, an error is raised.
+- `cond` checks different conditions and find the first one that does not evaluate to nil or false.
+- Elixir also provides `if/2` and `unless/2` to check for only one condition.
+- If any variable is declared or changed inside `if`, `case` the declaration and change will only be visible inside the construct.
+
+## Anonymous functions
+
 - TBD
