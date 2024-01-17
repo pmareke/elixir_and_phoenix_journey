@@ -56,4 +56,13 @@
 
 ## Anonymous functions
 
+- Anonymous functions in Elixir are delimited by the keywords ```fn` and `end`.
+- A dot `.` between the variable and parentheses is required to invoke an anonymous function.
+- Anonymous functions can also access variables that are in scope when the function is defined.
+- We can pattern match on the arguments of anonymous functions.
+- The capture syntax can also be used as a shortcut for creating functions `fun = &(&1 + 1)`.
+- The `&1` represents the first argument passed into the function.
+
+## Binaries, strings, and charlists
+
 - TBD
