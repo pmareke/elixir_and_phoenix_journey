@@ -26,4 +26,17 @@
 
 ## Lists and tuples
 
+- Elixir uses square brackets to specify a list of values of any type.
+- Two lists can be concatenated or subtracted using the `++/2` and `--/2` operators.
+- List operators never modify the existing list.
+- Elixir data structures are **immutable**.
+- The head of the list can be retrieved with the `hd/1` function.
+- The tail of the list can be retrieved with the `tl/1` function.
+- Elixir uses curly brackets to define tuples.
+- Lists are stored in memory as linked lists and Tuples, on the other hand, are stored contiguously in memory.
+- Lists are used when the number of elements returned may vary and Tuples have a fixed size. 
+- When counting the elements in a data structure the function is named `size` if the operation is in constant time or `length` if the operation is linear.
+
+## Pattern matching
+
 - TBD
