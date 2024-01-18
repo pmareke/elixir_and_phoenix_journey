@@ -65,4 +65,33 @@
 
 ## Binaries, strings, and charlists
 
-- TBD
+- In Elixir you can use a `?` in front of a character literal to reveal its code point.
+- Bitstring is a fundamental data type in Elixir, denoted with the `<<>>/1` syntax.
+- A binary is a bitstring where the number of bits is divisible by 8.
+- A charlist is a list of integers where all the integers are valid code points.
+- You can convert a charlist to a string and back by using the `to_string/1` and `to_charlist/1`.
+
+## Keyword lists and maps
+
+- Associative data structures are able to associate a key to a certain value.
+- Keyword lists are a data-structure used to pass options to functions.
+- Keyword lists are simply lists consisting of 2-item tuples where the first element (the key) is an atom and the second element can be any value.
+- You can read the value of a keyword list using the brackets syntax.
+- In case of duplicate keys, values added to the front are the ones fetched.
+- Keyword lists are important because they have three special characteristics:
+    - Keys must be atoms.
+    - Keys are ordered, as specified by the developer.
+    - Keys can be given more than once.
+- Keyword lists are used in situations where not all keys may be present.
+- In order to manipulate keyword lists, Elixir provides the `Keyword` module.
+- A map is created using the `%{}` syntax.
+- Compared to keyword lists, we can already see two differences:
+    - Maps allow any value as a key.
+    - Maps' keys do not follow any ordering.
+- In contrast to keyword lists, maps are very useful with pattern matching.
+- The `Map` module provides a very similar API to the `Keyword` module.
+- When the keys are atoms, in particular when working with maps of predefined keys, we can also access them using the map.key syntax.
+- These operations have one large benefit in that they raise if the key does not exist.
+- Use keyword lists for passing optional values to functions.
+- Use maps for general key-value data structures.
+- Use maps when working with data that has a predefined set of keys.
