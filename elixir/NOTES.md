@@ -98,4 +98,35 @@
 
 ## Modules and functions
 
+- In Elixir we group several functions into modules.
+- In order to create our own modules in Elixir, we use the `defmodule` macro.
+- We use the `def` macro to define functions in that module.
+- Elixir also supports `.exs` files for scripting.
+- Function declarations also support guards and multiple clauses.
+- If a function has several clauses, Elixir will try each clause until it finds one that matches.
+- Function definitions in Elixir also support default arguments (`\\`).
+- If a function with default values has multiple clauses, it is required to create a function head for declaring defaults.
+- When a variable is not used by a function or a clause, we add a leading underscore `_`.
+
+## Recursion
+
+- Elixir does not provide loop constructs.
+- Due to immutability, loops in Elixir are written differently from imperative languages.
+- Recursion and tail call optimization are an important part of Elixir and are commonly used to create loops.
+- The `Enum` module already provides many conveniences for working with lists.
+
+## Enumerables and Streams
+
+- Most operations we perform on collections is done with the `Enum` and `Stream` modules.
+- The `Enum` module provides a huge range of functions to transform, sort, group, filter and retrieve items from enumerables.
+- [Enum cheatsheet](https://hexdocs.pm/elixir/1.16/enum-cheat.html).
+- Elixir also provides `Ranges`.
+- For specific operations, like inserting and updating particular elements, you may need to reach for modules specific to the data type.
+- All the functions in the Enum module are eager.
+- The pipe operator (`|>`) takes the output from the expression on its left side and passes it as the first argument to the function call on its right side.
+- Elixir provides the `Stream` module which supports lazy operations.
+- Streams are lazy, composable enumerables.
+
+## Processes
+
 - TBD
