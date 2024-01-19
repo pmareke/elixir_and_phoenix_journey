@@ -167,5 +167,26 @@
 
 ## Module attributes
 
+- Module attributes in Elixir serve three purposes:
+    - They serve to annotate the module, often with information to be used by the user or the VM.
+    - They work as constants.
+    - They work as a temporary module storage to be used during compilation.
+- `@moduledoc` provides documentation for the current module.
+- `@doc` provides documentation for the function or macro that follows the attribute.
+- `@spec` provides a typespec for the function that follows the attribute.
+- `@behaviour` (notice the British spelling) used for specifying an OTP or user-defined behaviour.
+- Elixir treats documentation as first-class and provides many functions to access documentation.
+- Constants are defined adding the `@` to the variable name.
+
+## Structs
+
+- Structs are extensions built on top of maps that provide compile-time checks and default values.
+- To define a struct, the `defstruct/1` construct is used.
+- Structs share the same syntax for accessing and updating fields as maps of fixed keys using the update syntax `(|)`.
+- Structs are simply maps with a "special" field named __struct__ that holds the name of the struct.
+- Structs do not inherit any of the protocols that maps do.
+
+## Protocols
+
 - TBD
 

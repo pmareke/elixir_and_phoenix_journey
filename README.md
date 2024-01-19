@@ -21,6 +21,7 @@ Notes and exercises of my journey learning Elixir and Phoenix
 
 - [Notes](phoenix/NOTES.md)
 - Books:
-- Videos:
-- Websites:
+    - [Programming Phoenix 1.4](https://pragprog.com/titles/phoenix14/programming-phoenix-1-4/)
+    - [Phoenix in Action](https://www.manning.com/books/phoenix-in-action)
+    - [Programming Phoenix LiveView](https://pragprog.com/titles/liveview/programming-phoenix-liveview/)
 
