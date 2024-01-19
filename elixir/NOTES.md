@@ -129,4 +129,43 @@
 
 ## Processes
 
+- Processes are isolated from each other, run concurrent to one another and communicate via message passing.
+- Processes in Elixir are extremely lightweight in terms of memory and CPU.
+- The basic mechanism for spawning new processes is the auto-imported `spawn/1` function.
+- The spawned process will execute the given function and exit after the function is done.
+- We can retrieve the PID of the current process by calling `self/0`.
+- We can send messages to a process with `send/2` and receive them with `receive/1`.
+- When a message is sent to a process, the message is stored in the process mailbox.
+- The process that sends the message does not block.
+- The `inspect/1` function is used to convert a data structure's internal representation into a string.
+- Processes and links play an important role when building fault-tolerant systems.
+- Elixir processes are isolated and don't share anything by default.
+- Links allow processes to establish a relationship in case of failure.
+- `Tasks` build on top of the spawn functions to provide better error reports and introspection.
+- `Task.start/1` and `Task.start_link/1` which return `{:ok, pid}` rather than just the PID.
+- It is also possible to register the pid, giving it a name.
+- Elixir provides `Agents` are simple abstractions around state.
+
+## IO and the file system
+
+- The `IO` module is the main mechanism in Elixir for reading and writing to standard input/output.
+- By default, functions in the IO module read from the standard input and write to the standard output.
+- The File module contains functions that allow us to open files as IO devices.
+- The File functions version with `!` returns the contents of the file instead of a tuple.
+- The IO module actually works with processes.
+
+## alias, require, and import
+
+- `alias` allows you to set up aliases for any given module name.
+- Aliases are frequently used to define shortcuts.
+- Elixir provides macros as a mechanism for meta-programming.
+- We use `import` whenever we want to access functions or macros from other modules without using the fully-qualified name.
+- We can only import public functions, as private functions are never accessible externally.
+- The `use` macro is frequently used as an extension point.
+- `use` requires the given module and then calls the `__using__/1` callback on it allowing the module to inject some code into the current context.
+- Since `use` allows any code to run, we can't really know the side-effects of using a module without reading its documentation.
+
+## Module attributes
+
 - TBD
+
