@@ -11,12 +11,12 @@
 - You can invoke the `trunc` function to get the integer part of a float.
 - The `is_integer` funcition can be used to check if a value is an integer or not.
 - Functions in Elixir are identified by both their name and their arity.
-- Elixir supports true and false as booleans.
+- Elixir supports `true` and `false` as booleans.
 - Elixir also provides three boolean operators: `or/2`, `and/2`, and `not/1`.
 - Elixir also provides the concept of `nil` to indicate the absence of a value.
 - An atom is a constant whose value is its own name.
 - Elixir allows you to skip the leading `:` for the atoms `false`, `true` and `nil`.
-- Strings in Elixir are delimited by double quotes, and they are encoded in UTF-8.
+- `Strings` in Elixir are delimited by double quotes, and they are encoded in UTF-8.
 - You can concatenate two strings with the `<>/2` operator.
 - Elixir also supports string interpolation with `"#{variable}"`.
 - You can print a string using the `IO.puts/1` function from the IO module.
@@ -28,14 +28,15 @@
 
 - Elixir uses square brackets to specify a list of values of any type.
 - Two lists can be concatenated or subtracted using the `++/2` and `--/2` operators.
-- List operators never modify the existing list.
+- `List` operators never modify the existing list.
 - Elixir data structures are **immutable**.
-- The head of the list can be retrieved with the `hd/1` function.
-- The tail of the list can be retrieved with the `tl/1` function.
+- The `head` of the list can be retrieved with the `hd/1` function.
+- The `tail` of the list can be retrieved with the `tl/1` function.
 - Elixir uses curly brackets to define tuples.
-- Lists are stored in memory as linked lists and Tuples, on the other hand, are stored contiguously in memory.
-- Lists are used when the number of elements returned may vary and Tuples have a fixed size. 
-- When counting the elements in a data structure the function is named `size` if the operation is in constant time or `length` if the operation is linear.
+- `Lists` are stored in memory as linked lists and `Tuples`, on the other hand, are stored contiguously in memory.
+- `Lists` are used when the number of elements returned may vary and `Tuples` have a fixed size. 
+- When counting the elements in a data structure the function is named `size` if the operation is in constant time or `length` if 
+the operation is linear.
 
 ## Pattern matching
 
@@ -56,7 +57,7 @@
 
 ## Anonymous functions
 
-- Anonymous functions in Elixir are delimited by the keywords ```fn` and `end`.
+- Anonymous functions in Elixir are delimited by the keywords `fn` and `end`.
 - A dot `.` between the variable and parentheses is required to invoke an anonymous function.
 - Anonymous functions can also access variables that are in scope when the function is defined.
 - We can pattern match on the arguments of anonymous functions.
@@ -66,7 +67,7 @@
 ## Binaries, strings, and charlists
 
 - In Elixir you can use a `?` in front of a character literal to reveal its code point.
-- Bitstring is a fundamental data type in Elixir, denoted with the `<<>>/1` syntax.
+- `Bitstring` is a fundamental data type in Elixir, denoted with the `<<>>/1` syntax.
 - A binary is a bitstring where the number of bits is divisible by 8.
 - A charlist is a list of integers where all the integers are valid code points.
 - You can convert a charlist to a string and back by using the `to_string/1` and `to_charlist/1`.
@@ -86,13 +87,13 @@
 - In order to manipulate keyword lists, Elixir provides the `Keyword` module.
 - A map is created using the `%{}` syntax.
 - Compared to keyword lists, we can already see two differences:
-    - Maps allow any value as a key.
-    - Maps' keys do not follow any ordering.
+    - `Maps` allow any value as a key.
+    - `Maps`' keys do not follow any ordering.
 - In contrast to keyword lists, maps are very useful with pattern matching.
 - The `Map` module provides a very similar API to the `Keyword` module.
-- When the keys are atoms, in particular when working with maps of predefined keys, we can also access them using the map.key syntax.
+- When the keys are atoms, in particular when working with maps of predefined keys, we can also access them using the `map.key` syntax.
 - These operations have one large benefit in that they raise if the key does not exist.
-- Use keyword lists for passing optional values to functions.
+- Use keyword lists for passing optional arguments to functions.
 - Use maps for general key-value data structures.
 - Use maps when working with data that has a predefined set of keys.
 
@@ -101,6 +102,7 @@
 - In Elixir we group several functions into modules.
 - In order to create our own modules in Elixir, we use the `defmodule` macro.
 - We use the `def` macro to define functions in that module.
+- We use the `defp` macro to define private functions in that module.
 - Elixir also supports `.exs` files for scripting.
 - Function declarations also support guards and multiple clauses.
 - If a function has several clauses, Elixir will try each clause until it finds one that matches.
@@ -123,14 +125,15 @@
 - Elixir also provides `Ranges`.
 - For specific operations, like inserting and updating particular elements, you may need to reach for modules specific to the data type.
 - All the functions in the Enum module are eager.
-- The pipe operator (`|>`) takes the output from the expression on its left side and passes it as the first argument to the function call on its right side.
+- The pipe operator (`|>`) takes the output from the expression on its left side and passes it as the first argument to the function call 
+on its right side.
 - Elixir provides the `Stream` module which supports lazy operations.
-- Streams are lazy, composable enumerables.
+- `Streams` are lazy, composable enumerables.
 
 ## Processes
 
-- Processes are isolated from each other, run concurrent to one another and communicate via message passing.
-- Processes in Elixir are extremely lightweight in terms of memory and CPU.
+- `Processes` are isolated from each other, run concurrent to one another and communicate via message passing.
+- `Processes` in Elixir are extremely lightweight in terms of memory and CPU.
 - The basic mechanism for spawning new processes is the auto-imported `spawn/1` function.
 - The spawned process will execute the given function and exit after the function is done.
 - We can retrieve the PID of the current process by calling `self/0`.
@@ -138,32 +141,36 @@
 - When a message is sent to a process, the message is stored in the process mailbox.
 - The process that sends the message does not block.
 - The `inspect/1` function is used to convert a data structure's internal representation into a string.
-- Processes and links play an important role when building fault-tolerant systems.
+- `Processes` and links play an important role when building fault-tolerant systems.
 - Elixir processes are isolated and don't share anything by default.
-- Links allow processes to establish a relationship in case of failure.
+- `Links` allow processes to establish a relationship in case of failure.
+- To propagate one error from one process to another use `spawn_link`.
+- `spawn` and `spawn_link` are the basic primitives for creating processes in Elixir.
 - `Tasks` build on top of the spawn functions to provide better error reports and introspection.
-- `Task.start/1` and `Task.start_link/1` which return `{:ok, pid}` rather than just the PID.
-- It is also possible to register the pid, giving it a name.
-- Elixir provides `Agents` are simple abstractions around state.
+    - `Task.start/1` and `Task.start_link/1` which return `{:ok, pid}` rather than just the PID.
+    - It is also possible to register the pid, giving it a name.
+- Elixir provides `Agents` are simple abstractions around `state`.
 
 ## IO and the file system
 
 - The `IO` module is the main mechanism in Elixir for reading and writing to standard input/output.
 - By default, functions in the IO module read from the standard input and write to the standard output.
-- The File module contains functions that allow us to open files as IO devices.
-- The File functions version with `!` returns the contents of the file instead of a tuple.
-- The IO module actually works with processes.
+- The `File` module contains functions that allow us to open files as IO devices.
+- The `File` functions version with `!` returns the contents of the file instead of a tuple.
+- The `IO` module actually works with processes.
 
 ## alias, require, and import
 
 - `alias` allows you to set up aliases for any given module name.
-- Aliases are frequently used to define shortcuts.
-- Elixir provides macros as a mechanism for meta-programming.
+- `Aliases` are frequently used to define shortcuts.
+- Elixir provides `macros` as a mechanism for meta-programming.
+- `require` makes sure that the required module is loaded before the calling module.
 - We use `import` whenever we want to access functions or macros from other modules without using the fully-qualified name.
 - We can only import public functions, as private functions are never accessible externally.
 - The `use` macro is frequently used as an extension point.
 - `use` requires the given module and then calls the `__using__/1` callback on it allowing the module to inject some code into the current context.
 - Since `use` allows any code to run, we can't really know the side-effects of using a module without reading its documentation.
+- It is possible to `alias`, `import`, `require`, or `use` multiple modules at once.
 
 ## Module attributes
 
@@ -180,13 +187,56 @@
 
 ## Structs
 
-- Structs are extensions built on top of maps that provide compile-time checks and default values.
+- `Structs` are extensions built on top of maps that provide compile-time checks and default values.
 - To define a struct, the `defstruct/1` construct is used.
-- Structs share the same syntax for accessing and updating fields as maps of fixed keys using the update syntax `(|)`.
-- Structs are simply maps with a "special" field named __struct__ that holds the name of the struct.
-- Structs do not inherit any of the protocols that maps do.
+- `Structs` are bare `Maps` underneath.
+- If you don't specify a default key value when defining a struct, `nil` will be assumed.
+- `Structs` share the same syntax for accessing and updating fields as maps of fixed keys using the update syntax `(|)`.
+- `Structs` are simply maps with a "special" field named __struct__ that holds the name of the struct.
+- `Structs` do not inherit any of the protocols that maps do.
 
 ## Protocols
 
-- TBD
+- `Protocols` are a mechanism to achieve polymorphism in Elixir where you want the behavior to vary depending on the data type.
+- `Protocols` allow us to extend the original behavior for as many data types as we need.
+- We define the protocol using `defprotocol`.
+- We implement the protocol for a data type using `defimpl , for`.
+- The power of Elixir's extensibility comes when protocols and structs are used together.
+- Elixir allows us to derive a protocol implementation based on the `Any` implementation.
+
+## Comprehensions
+
+- `Comprehensions` are syntactic sugar for looping over an Enumerable, often filtering out some results and mapping values into another list.
+- A `comprehension` is made of three parts: generators, filters, and collectables.
+    - In `for n <- [1, 2, 3, 4], n > 1, do: n * n` 
+    - `n <- [1, 2, 3, 4]` is the generator.
+    - `n > 1` is the filter.
+    - `do: n * n` is the collectable.
+-  The result of a `comprehension` can be inserted into different data structures by passing the `:into`.
+
+## Sigils
+
+- Elixir provides double-quoted strings as well as a concept called charlists.
+- `Sigils` provide the foundation for extending the language with custom textual representations.
+- `Sigils` start with the tilde `~` character.
+- The most common `sigil` in Elixir is `~r`, which is used to create regular expressions.
+- The `~w` sigil is used to generate lists of words.
+- The `~s` sigil is used to generate strings.
+- The `~c` sigil is used to generate charlists.
+- The `~D` sigil is used to generate dates.
+- The `~T` sigil is used to generate times.
+
+## try, catch, and rescue
+
+- `Errors` (or `exceptions`) are used when exceptional things happen in the code.
+- `Errors` are raised using the `raise/1` function.
+- Other errors can be raised with `raise/2` passing the error name.
+- `Errors` can be caught using the `try/catch` construct.
+- A process can also die by explicitly sending an `exit` signal.
+- `exit` can also be "caught" using `try/catch`.
+- The `try/after` construct allows to ensure that a resource is cleaned up after some action that could potentially raise an error.
+
+## Debugging
+
+- `IO.inspect/2` is a useful function to print information while debugging.
 
