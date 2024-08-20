@@ -240,3 +240,7 @@ on its right side.
 
 - `IO.inspect/2` is a useful function to print information while debugging.
 
+## Macros
+
+- Write macros responsibly.
+- `Macros` in Elixir are defined via `defmacro/2`.

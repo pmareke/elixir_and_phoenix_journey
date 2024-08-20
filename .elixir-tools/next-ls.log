@@ -1,0 +1,273 @@
+
+19:40:29.409 [info] Loading 154 CA(s) from :otp store
+
+19:40:29.558 id=1 [debug] handled request client -> server initialize in 100ms
+
+19:40:29.563 [debug] sent notification server -> client window/logMessage
+
+19:40:29.566 [debug] NextLS v0.23.1 has initialized!
+
+19:40:29.566 [debug] sent notification server -> client window/logMessage
+
+19:40:29.567 [debug] Log file located at /Users/pedrolopezmareque/Developer/elixir/elixir_and_phoenix_journey/.elixir-tools/next-ls.log
+
+19:40:29.570 [debug] sent notification server -> client window/logMessage
+
+19:40:29.570 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+19:40:29.570 id=66 [debug] sent request server -> client client/registerCapability
+
+19:40:31.593 [debug] sent notification server -> client window/logMessage
+
+19:40:31.593 [debug] Booting runtimes...
+
+19:40:31.596 id=130 [debug] sent request server -> client window/workDoneProgress/create
+
+19:40:31.599 [debug] sent notification server -> client $/progress
+
+19:40:31.616 [debug] sent notification server -> client window/logMessage
+
+19:40:31.616 [info] Beginning DB migration...
+
+19:40:31.621 [debug] sent notification server -> client window/logMessage
+
+19:40:31.621 [info] Database is on the latest version: 7
+
+19:40:31.621 [debug] sent notification server -> client window/logMessage
+
+19:40:31.621 [info] Finished DB migration...
+
+19:40:31.621 [debug] sent notification server -> client window/logMessage
+
+19:40:31.621 [info] Booting runtime for kv.
+
+- elixir: /opt/homebrew/bin/elixir
+- zombie wrapper script: /Users/pedrolopezmareque/Library/Application Support/.burrito/next_ls_erts-15.0_0.23.1/lib/next_ls-0.23.1/priv/cmd
+- working_dir: /Users/pedrolopezmareque/Developer/elixir/elixir_and_phoenix_journey/elixir/kv
+- command: /opt/homebrew/bin/elixir --no-halt --sname nextls-runtime-1724002831621432166 --cookie OAA6TYMANQMNSHHOJFXLYUZMPBVXMWZLJY462D4HNFCTZYFVU5SQ==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3KG5leHQtbHMtMTcyNDAwMjgyOTQyMjQzODE2NkBwZWRyb2xvcGV6LW0AAADiAAAAAGbCMg4=
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/opt/homebrew/bin:/Users/pedrolopezmareque/Library/Application Support/.burrito/next_ls_erts-15.0_0.23.1/bin:/Users/pedrolopezmareque/.local/share/nvim/mason/bin:/Users/pedrolopezmareque/.local/share/nvim/mason/bin:/Users/pedrolopezmareque/.asdf/shims:/opt/homebrew/opt/asdf/libexec/bin:/Users/pedrolopezmareque/.asdf/installs/golang/1.21.5/packages/bin:/opt/X11/bin:/usr/X11/bin:/opt/homebrew/opt/libpq/bin:/Users/pedrolopezmareque/bin:/Users/pedrolopezmareque/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Users/pedrolopezmareque/.asdf/installs/golang/1.21.5/packages/bin:/usr/X11/bin:/opt/homebrew/opt/libpq/bin:/Users/pedrolopezmareque/bin:/Users/pedrolopezmareque/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+
+19:40:31.622 [debug] handled notification client -> server initialized in 2061ms
+
+19:40:31.624 [debug] handled notification client -> server textDocument/didOpen in 2ms
+
+19:40:32.727 [debug] sent notification server -> client window/logMessage
+
+19:40:32.727 [info] Connected to node nextls-runtime-1724002831621432166@pedrolopez-m
+
+19:40:32.996 [debug] sent notification server -> client $/progress
+
+19:40:32.997 [debug] sent notification server -> client window/logMessage
+
+19:40:32.997 [debug] Runtime for folder kv is ready...
+
+19:40:32.999 id=258 [debug] sent request server -> client window/workDoneProgress/create
+
+19:40:32.999 [debug] sent notification server -> client $/progress
+
+19:40:33.062 [debug] sent notification server -> client $/progress
+
+19:40:33.062 [debug] sent notification server -> client window/logMessage
+
+19:40:33.062 [info] Compiled kv!
+
+19:40:44.734 id=2 [debug] handled request client -> server shutdown in 2ms
+
+19:40:44.750 [debug] sent notification server -> client window/logMessage
+
+19:40:44.750 [info] The runtime for kv has successfully shut down.
+
+19:40:48.576 [info] Loading 154 CA(s) from :otp store
+
+19:40:48.724 id=1 [debug] handled request client -> server initialize in 94ms
+
+19:40:48.729 [debug] sent notification server -> client window/logMessage
+
+19:40:48.732 [debug] NextLS v0.23.1 has initialized!
+
+19:40:48.732 [debug] sent notification server -> client window/logMessage
+
+19:40:48.732 [debug] Log file located at /Users/pedrolopezmareque/Developer/elixir/elixir_and_phoenix_journey/.elixir-tools/next-ls.log
+
+19:40:48.736 [debug] sent notification server -> client window/logMessage
+
+19:40:48.736 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+19:40:48.736 id=131 [debug] sent request server -> client client/registerCapability
+
+19:40:50.681 [debug] sent notification server -> client window/logMessage
+
+19:40:50.681 [debug] Booting runtimes...
+
+19:40:50.685 id=2 [debug] sent request server -> client window/workDoneProgress/create
+
+19:40:50.689 [debug] sent notification server -> client $/progress
+
+19:40:50.702 [debug] sent notification server -> client window/logMessage
+
+19:40:50.702 [info] Beginning DB migration...
+
+19:40:50.709 [debug] sent notification server -> client window/logMessage
+
+19:40:50.709 [info] Database is on the latest version: 7
+
+19:40:50.709 [debug] sent notification server -> client window/logMessage
+
+19:40:50.709 [info] Finished DB migration...
+
+19:40:50.709 [debug] sent notification server -> client window/logMessage
+
+19:40:50.709 [info] Booting runtime for hello.
+
+- elixir: /opt/homebrew/bin/elixir
+- zombie wrapper script: /Users/pedrolopezmareque/Library/Application Support/.burrito/next_ls_erts-15.0_0.23.1/lib/next_ls-0.23.1/priv/cmd
+- working_dir: /Users/pedrolopezmareque/Developer/elixir/elixir_and_phoenix_journey/phoenix/hello
+- command: /opt/homebrew/bin/elixir --no-halt --sname nextls-runtime-1724002850709669125 --cookie OAA6TYMANQMNSHHOJFXLYUZMPBVXMWZLJY462D4HNFCTZYFVU5SQ==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3KG5leHQtbHMtMTcyNDAwMjg0ODU5MTg2MDQ1OEBwZWRyb2xvcGV6LW0AAADiAAAAAGbCMiE=
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/opt/homebrew/bin:/Users/pedrolopezmareque/Library/Application Support/.burrito/next_ls_erts-15.0_0.23.1/bin:/Users/pedrolopezmareque/.local/share/nvim/mason/bin:/Users/pedrolopezmareque/.local/share/nvim/mason/bin:/Users/pedrolopezmareque/.asdf/shims:/opt/homebrew/opt/asdf/libexec/bin:/Users/pedrolopezmareque/.asdf/installs/golang/1.21.5/packages/bin:/opt/X11/bin:/usr/X11/bin:/opt/homebrew/opt/libpq/bin:/Users/pedrolopezmareque/bin:/Users/pedrolopezmareque/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Users/pedrolopezmareque/.asdf/installs/golang/1.21.5/packages/bin:/usr/X11/bin:/opt/homebrew/opt/libpq/bin:/Users/pedrolopezmareque/bin:/Users/pedrolopezmareque/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+
+19:40:50.710 [debug] handled notification client -> server initialized in 1984ms
+
+19:40:50.715 [debug] handled notification client -> server textDocument/didOpen in 4ms
+
+19:40:51.735 [debug] sent notification server -> client window/logMessage
+
+19:40:51.735 [info] Connected to node nextls-runtime-1724002850709669125@pedrolopez-m
+
+19:40:52.022 [debug] sent notification server -> client $/progress
+
+19:40:52.023 [debug] sent notification server -> client window/logMessage
+
+19:40:52.023 [debug] Runtime for folder hello is ready...
+
+19:40:52.025 id=38 [debug] sent request server -> client window/workDoneProgress/create
+
+19:40:52.026 [debug] sent notification server -> client $/progress
+
+19:40:52.117 [debug] sent notification server -> client $/progress
+
+19:40:52.117 [debug] sent notification server -> client window/logMessage
+
+19:40:52.117 [info] Compiled hello!
+
+19:40:59.586 [info] Loading 154 CA(s) from :otp store
+
+19:40:59.731 id=1 [debug] handled request client -> server initialize in 95ms
+
+19:40:59.736 [debug] sent notification server -> client window/logMessage
+
+19:40:59.739 [debug] NextLS v0.23.1 has initialized!
+
+19:40:59.739 [debug] sent notification server -> client window/logMessage
+
+19:40:59.739 [debug] Log file located at /Users/pedrolopezmareque/Developer/elixir/elixir_and_phoenix_journey/.elixir-tools/next-ls.log
+
+19:40:59.742 [debug] sent notification server -> client window/logMessage
+
+19:40:59.742 id=71 [debug] sent request server -> client client/registerCapability
+
+19:40:59.742 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+19:41:01.515 [debug] sent notification server -> client window/logMessage
+
+19:41:01.515 [debug] Booting runtimes...
+
+19:41:01.518 id=2 [debug] sent request server -> client window/workDoneProgress/create
+
+19:41:01.523 [debug] sent notification server -> client $/progress
+
+19:41:01.535 [debug] sent notification server -> client window/logMessage
+
+19:41:01.535 [info] Beginning DB migration...
+
+19:41:01.541 [debug] sent notification server -> client window/logMessage
+
+19:41:01.541 [info] Database is on the latest version: 7
+
+19:41:01.541 [debug] sent notification server -> client window/logMessage
+
+19:41:01.541 [info] Finished DB migration...
+
+19:41:01.541 [debug] sent notification server -> client window/logMessage
+
+19:41:01.541 [info] Booting runtime for kv.
+
+- elixir: /opt/homebrew/bin/elixir
+- zombie wrapper script: /Users/pedrolopezmareque/Library/Application Support/.burrito/next_ls_erts-15.0_0.23.1/lib/next_ls-0.23.1/priv/cmd
+- working_dir: /Users/pedrolopezmareque/Developer/elixir/elixir_and_phoenix_journey/elixir/kv
+- command: /opt/homebrew/bin/elixir --no-halt --sname nextls-runtime-1724002861541065167 --cookie OAA6TYMANQMNSHHOJFXLYUZMPBVXMWZLJY462D4HNFCTZYFVU5SQ==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3KG5leHQtbHMtMTcyNDAwMjg1OTYwMTMzMDI1MEBwZWRyb2xvcGV6LW0AAADiAAAAAGbCMiw=
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/opt/homebrew/bin:/Users/pedrolopezmareque/Library/Application Support/.burrito/next_ls_erts-15.0_0.23.1/bin:/Users/pedrolopezmareque/.local/share/nvim/mason/bin:/Users/pedrolopezmareque/.local/share/nvim/mason/bin:/Users/pedrolopezmareque/.asdf/shims:/opt/homebrew/opt/asdf/libexec/bin:/Users/pedrolopezmareque/.asdf/installs/golang/1.21.5/packages/bin:/opt/X11/bin:/usr/X11/bin:/opt/homebrew/opt/libpq/bin:/Users/pedrolopezmareque/bin:/Users/pedrolopezmareque/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Users/pedrolopezmareque/.asdf/installs/golang/1.21.5/packages/bin:/usr/X11/bin:/opt/homebrew/opt/libpq/bin:/Users/pedrolopezmareque/bin:/Users/pedrolopezmareque/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+
+19:41:01.541 [debug] handled notification client -> server initialized in 1808ms
+
+19:41:01.545 [debug] handled notification client -> server textDocument/didOpen in 4ms
+
+19:41:02.556 [debug] sent notification server -> client window/logMessage
+
+19:41:02.556 [info] Connected to node nextls-runtime-1724002861541065167@pedrolopez-m
+
+19:41:02.823 [debug] sent notification server -> client $/progress
+
+19:41:02.824 [debug] sent notification server -> client window/logMessage
+
+19:41:02.824 [debug] Runtime for folder kv is ready...
+
+19:41:02.826 id=66 [debug] sent request server -> client window/workDoneProgress/create
+
+19:41:02.827 [debug] sent notification server -> client $/progress
+
+19:41:02.889 [debug] sent notification server -> client $/progress
+
+19:41:02.889 [debug] sent notification server -> client window/logMessage
+
+19:41:02.889 [info] Compiled kv!
+
+19:41:06.794 id=2 [debug] handled request client -> server shutdown in 1ms
+
+19:41:06.815 [debug] sent notification server -> client window/logMessage
+
+19:41:06.815 [info] The runtime for kv has successfully shut down.
+
+19:41:06.794 id=2 [debug] handled request client -> server shutdown in 2ms
+
+19:41:06.815 [debug] sent notification server -> client window/logMessage
+
+19:41:06.815 [info] The runtime for hello has successfully shut down.
