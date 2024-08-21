@@ -240,7 +240,42 @@ on its right side.
 
 - `IO.inspect/2` is a useful function to print information while debugging.
 
-## Macros
+## Meta-programming
+
+
+### Quote and unquote
+
+- The building block of an Elixir program is a tuple with three elements.
+    - `quote do: sum(1, 2, 3)` -> `{:sum, [], [1, 2, 3]}`
+- You can get the representation of any expression by using the `quote/2` macro.
+    - The first element is the function name.
+    - The second is a keyword list containing metadata.
+    - The third is the arguments list.
+- `Quoting` is about retrieving the inner representation of some particular chunk of code.
+- `Unquoting` is about injecting a value into a quoted expression.
+
+### Macros
 
 - Write macros responsibly.
 - `Macros` in Elixir are defined via `defmacro/2`.
+
+## Domain-Specific Languages (DSLs)
+
+- DSLs are languages tailored to a specific application domain.
+- The `__using__/1` initializes the module.
+- Callbacks such as `@before_compile (__before_compile__)` allow us to inject code into the module when its definition is complete.
+
+## Patterns and guards
+
+- Elixir provides pattern matching.
+- Patterns in Elixir are made of variables, literals, and data structure specific syntax.
+    - The match operator `(=)` performs pattern matching.
+    - Patterns are not bidirectional.
+- Elixir supports rebinding `(^)` in case you don't want the value of a variable to change.
+- `Tuples` may appear in patterns using the curly brackets syntax `({})`.
+- `Lists` may appear in patterns using the square brackets syntax `([])`.
+- `Lists` also allow matching on non-empty lists by using the `[head | tail]` notation.
+- `Maps` may appear in patterns using the `%{}` syntax.
+- `Structs` may appear in patterns using the `%ModuleName{}` syntax.
+- `Guards` are a way to augment pattern matching with more complex checks.
+    - `Guards` are defined using the `when` keyword.

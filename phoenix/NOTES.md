@@ -166,3 +166,5 @@
 - The function `redirect/2` allows to redirect the user to a different URL.
 - The function `put_flash/3` allows to set a flash message.
 - Phoenix has two views called `ErrorHTML` and `ErrorJSON` to handle errors.
+
+## Components and HEEx
