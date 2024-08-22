@@ -1,0 +1,21 @@
+<.flash_group flash={@flash} />
+
+<.header>
+  Users
+</.header>
+
+<.table id="users" rows={@users}>
+  <:col :let={user} label="name"><%= user.name %> (<%= user.id %>)</:col>
+  <:col :let={user} label="username"><%= user.username %></:col>
+  <:col :let={user} label="View"><.link href={~p"/users/#{user}"} class={[
+                                        "rounded-lg bg-zinc-900 hover:bg-zinc-700 py-2 px-3",
+                                        "text-sm font-semibold leading-6 text-white active:text-white/80"
+                                        ]}>Show User</.link></:col>
+</.table>
+
+<div class="flex h-20 mx-auto max-w-2xl items-end self-end">
+  <.link href={~p"/users/new"} class={[
+         "rounded-lg bg-zinc-900 hover:bg-zinc-700 py-2 px-3",
+         "text-sm font-semibold leading-6 bg-orange-600 text-white active:text-white/80"
+         ]}>Create User</.link>
+</div>

@@ -1,0 +1,18 @@
+<.header>
+  Login
+</.header>
+
+<.simple_form
+  :let={f}
+  for={@connection}
+  as={:session}
+  phx-change="validate"
+  action={~p"/sessions"}>
+  <.input field={f[:username]} label="Username" />
+  <.input field={f[:password]} type="password" label="Password" />
+
+  <:actions>
+    <.button>Log In</.button>
+  </:actions>
+</.simple_form>
+

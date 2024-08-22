@@ -1,0 +1,35 @@
+<header class="px-4 sm:px-6 lg:px-8">
+  <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
+    <div class="flex items-center gap-4">
+      <a href="/">
+        <img src={~p"/images/logo.svg"} width="36" />
+      </a>
+      <p class="bg-brand/5 text-brand rounded-full px-2 font-medium leading-6">
+        v<%= Application.spec(:phoenix, :vsn) %>
+      </p>
+    </div>
+    <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
+      <%= if @conn.assigns.current_user do %>
+        <.link href={~p"/users/#{@conn.assigns.current_user.id}"}><%= @current_user.username %></.link>
+        <.link href={~p"/sessions/delete"} method="delete" class="rounded-md bg-red-400 text-white px-3 py-2 hover:bg-red-600/80">
+          Log out
+        </.link>
+      <% else %>
+        <.link href="/users/new" class="rounded-md bg-zinc-100 bg-blue-500 text-white px-3 py-2 hover:bg-blue-700/80">
+          Register
+        </.link>
+        <.link href="/sessions/new" class="rounded-md bg-green-600 text-white px-3 py-2 hover:bg-green-700/80">
+          Log In
+        </.link>
+      <% end %>
+    </div>
+  </div>
+</header>
+
+<main class="px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-4xl">
+    <.flash_group flash={@flash} />
+    <%= @inner_content %>
+  </div>
+</main>
+
