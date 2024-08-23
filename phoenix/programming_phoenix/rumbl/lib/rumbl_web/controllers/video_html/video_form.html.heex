@@ -1,0 +1,11 @@
+<.simple_form :let={f} for={@changeset} action={@action}>
+  <.error :if={@changeset.action}>
+    Oops, something went wrong! Please check the errors below.
+  </.error>
+  <.input field={f[:url]} type="text" label="Url" />
+  <.input field={f[:title]} type="text" label="Title" />
+  <.input field={f[:description]} type="text" label="Description" />
+  <:actions>
+    <.button>Save Video</.button>
+  </:actions>
+</.simple_form>

@@ -1,0 +1,25 @@
+<.header>
+  Listing Videos
+  <:actions>
+    <.link href={~p"/manage/videos/new"}>
+      <.button>New Video</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="videos" rows={@videos} row_click={&JS.navigate(~p"/manage/videos/#{&1}")}>
+  <:col :let={video} label="Url"><%= video.url %></:col>
+  <:col :let={video} label="Title"><%= video.title %></:col>
+  <:col :let={video} label="Description"><%= video.description %></:col>
+  <:action :let={video}>
+    <div class="sr-only">
+      <.link navigate={~p"/manage/videos/#{video}"}>Show</.link>
+    </div>
+    <.link navigate={~p"/manage/videos/#{video}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={video}>
+    <.link href={~p"/manage/videos/#{video}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>

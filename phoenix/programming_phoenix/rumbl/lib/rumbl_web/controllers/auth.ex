@@ -1,5 +1,11 @@
 defmodule RumblWeb.Auth do
+  import Phoenix.Controller
   import Plug.Conn
+
+  use Phoenix.VerifiedRoutes,
+    endpoint: RumblWeb.Endpoint,
+    router: RumblWeb.Router,
+    statics: RumblWeb.static_paths()
 
   def init(opts), do: opts
 
@@ -19,5 +25,16 @@ defmodule RumblWeb.Auth do
 
   def logout(conn) do
     configure_session(conn, drop: true)
+  end
+
+  def authenticate_user(conn, _opts) do
+    if conn.assigns.current_user do
+      conn
+    else
+      conn
+      |> put_flash(:error, "You must be logged in to access that page")
+      |> redirect(to: ~p"/sessions/new")
+      |> halt()
+    end
   end
 end

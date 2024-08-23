@@ -1,0 +1,8 @@
+<.header>
+  Edit Video <%= @video.id %>
+  <:subtitle>Use this form to manage video records in your database.</:subtitle>
+</.header>
+
+<.video_form changeset={@changeset} action={~p"/manage/videos/#{@video}"} />
+
+<.back navigate={~p"/manage/videos"}>Back to videos</.back>

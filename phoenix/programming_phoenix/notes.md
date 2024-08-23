@@ -116,3 +116,28 @@ substitutions and loops.
 - Plug pipelines explicitly check for `halted`: true between every plug invocation.
 
 ## Chapter 6 - Generators and Relationships
+
+- Phoenix includes two `Mix` tasks to bootstrap web interfaces:
+    - `phx.gen.html` creates a simple HTTP scaffold with `HTML` pages.
+    - `phx.gen.json` does the same for a REST-based `API` using `JSON`.
+- The `change` function handles two database changes:
+    - For migrating `up`.
+    - For migrating `down`.
+- After the migration, `Ecto` generated a `schema`.
+- To relate our data at the schema level use `belongs_to` or `has_many`.
+- `Ecto.Changeset.put_assoc` allows us to place an association as a `change` into the `changeset`.
+- `Changeset.put_change` into a `Changeset.change` you can update a record.
+- `assoc` is another convenient function from `Ecto` that returns an `Ecto.Query`.
+- Each `controller` is also a `plug`.
+- To call a `controller`, Phoenix invokes the default `action` function at the end of the controller `pipeline`.
+- The `apply` function takes the `module`, the `action` name, and the `arguments`.
+- The `__MODULE__` directive expands to the current module.
+- `mixphx.gen.html`: generates a `controller`, `view`, and `template` on the frontend.
+- `mixphx.gen.context`: generates a `resource` with all of its context functions `without` exposing that resource via the `web` interface.
+- `mixphx.gen.schema`: creates a `schema` with a `migration`.
+- `mix ecto.gen.migration`: builds a new `empty migration`. 
+    - Useful when the schema and context are already exist.
+
+## Chapter 7 - Ecto Queries and Constraints
+
+- 
