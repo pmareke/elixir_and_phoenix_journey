@@ -3,16 +3,15 @@
 </.header>
 
 <.simple_form
+  for={@session}
   :let={f}
-  for={@connection}
   as={:session}
   phx-change="validate"
   action={~p"/sessions"}>
   <.input field={f[:username]} label="Username" />
-  <.input field={f[:password]} type="password" label="Password" />
+  <.input field={f[:password]} label="Password" type="password" />
 
   <:actions>
     <.button>Log In</.button>
   </:actions>
 </.simple_form>
-

@@ -2,21 +2,16 @@ defmodule RumblWeb.SessionController do
   use RumblWeb, :controller
 
   def new(conn, _) do
-    render(conn, "new.html", connection: %{})
+    render(conn, "new.html", session: conn.params[:session])
   end
 
-  def create(conn, %{
-        "session" => %{
-          "username" => username,
-          "password" => password
-        }
-      }) do
+  def create(conn, %{"username" => username, "password" => password}) do
     case Rumbl.Accounts.authenticate_by_username_and_pass(username, password) do
       {:ok, user} ->
         conn
         |> RumblWeb.Auth.login(user)
         |> put_flash(:info, "Welcome back, #{user.name}!")
-        |> redirect(to: ~p"/")
+        |> redirect(to: ~p"/users")
 
       {:error, _reason} ->
         conn
