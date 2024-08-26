@@ -242,7 +242,6 @@ on its right side.
 
 ## Meta-programming
 
-
 ### Quote and unquote
 
 - The building block of an Elixir program is a tuple with three elements.

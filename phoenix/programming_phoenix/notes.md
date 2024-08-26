@@ -140,4 +140,3 @@ substitutions and loops.
 
 ## Chapter 7 - Ecto Queries and Constraints
 
-- 
