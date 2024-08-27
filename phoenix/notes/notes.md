@@ -168,3 +168,10 @@
 - Phoenix has two views called `ErrorHTML` and `ErrorJSON` to handle errors.
 
 ## Components and HEEx
+
+- Function components are defined with the help of the Phoenix.Component module.
+- All of the imports and aliases we make in our module will also be available in our templates.
+- By declaring attributes as required, Phoenix will warn at compile time.
+- Display assigns we have set by way of the @ shortcut.
+- In a new Phoenix application, there is a `core_components.ex` module inside the components folder.
+
