@@ -1,0 +1,13 @@
+<.simple_form for={@form} phx-change="change" phx-submit="save">
+
+  <.label>Email: <%= @form.params.email %></.label>
+  <.input field={@form[:email]} label="Email"/>
+
+  <.label>Username: <%= @form.params.username %></.label>
+  <.input field={@form[:username]} label="Username" />
+
+  <:actions>
+    <.button>Save</.button>
+  </:actions>
+
+</.simple_form>

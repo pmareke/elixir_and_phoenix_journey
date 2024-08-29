@@ -1,5 +1,6 @@
-# Live View
+# LiveView
 
+- A LiveView is a process that receives events, updates its state, and renders updates to a page as diff.
 - Phoenix `LiveView` enables rich, real-time user experiences with server-rendered HTML.
 - `LiveViews` are processes that receive `events`, update their `state`, and render updates to a page as diffs.
 - Events in `LiveView` are regular messages which may cause changes to the state.
@@ -38,6 +39,14 @@
 - `LiveView` supports two extension mechanisms:
     - `Function` components, provided by HEEx templates.
     - `Stateful` components.
+- You begin by rendering a `LiveView` typically from your `router`.
+    - When `LiveView` is first rendered, the `mount/3` callback is invoked with the current `params`.
+    - The `mount/3` callback wires up socket `assigns` necessary for rendering the view.
+    - After mounting, `handle_params/3` is invoked so uri and query params are handled.
+    - Finally, `render/1` is invoked and the HTML is sent as a regular HTML response to the client.
+- There are two possible ways of `rendering` content in a `LiveView`:
+    - The first one is by `explicitly` defining a render function, which receives assigns and returns a HEEx template defined with the `~H` sigil.
+    - For larger `templates`, you can place them in a file in the `same directory` and `same name` as the `LiveView`.
 
 ## Server-Side Rendering
 
@@ -108,3 +117,4 @@
 - Function components can accept blocks of HEEx content, referred to as slots.
     - Use `<%= render_slot(@inner_block) %>`  to declare slots for function components.
 - The `embed_templates/1` macro can be used to embed `.html.heex` files as function components.
+
