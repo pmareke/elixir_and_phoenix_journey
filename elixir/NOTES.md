@@ -278,3 +278,20 @@ on its right side.
 - `Structs` may appear in patterns using the `%ModuleName{}` syntax.
 - `Guards` are a way to augment pattern matching with more complex checks.
     - `Guards` are defined using the `when` keyword.
+
+## ExUnit
+
+- `ExUnit` is Elixir's built-in test framework.
+- Test files have the `test.exs` extension.
+- It's neccesary run `ExUnit.start()` before running tests.
+- It's neccessary to use `ExUnit.Case` to define a test case.
+- `ExUnit` is integrated with `Mix` and can be run with `mix test`.
+- The main `assertions` are:
+    - `assert` and `refute` for general assertions.
+    - `assert_raise` and `refute_raise` for exception assertions.
+    - `assert_receive` and `refute_receive` for message passing assertions.
+The main `callbacks` are:
+    - `setup_all` which is invoked only once per module.
+    - `setup` which is invoked before each test.
+    - `start_supervised` which is invoked before each test and starts the test process under a supervisor.
+    - `on_exit` which is invoked after each test.
